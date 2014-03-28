@@ -15,6 +15,7 @@ function envpm(dir, args) {
   }
 
   function registryize(err, data) {
+    if(err) return exec_npm(args)
     exec_npm(args.concat(['--registry', data.toString().trim()]))
   }
 }
