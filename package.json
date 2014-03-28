@@ -1,0 +1,34 @@
+{
+  "name": "envpm",
+  "version": "0.0.0",
+  "description": "npm registry environment manager",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jarofghosts/envpm.git"
+  },
+  "keywords": [
+    "npm",
+    "registry",
+    "manager",
+    "virtualenv"
+  ],
+  "author": "jesse keane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarofghosts/envpm/issues"
+  },
+  "homepage": "https://github.com/jarofghosts/envpm",
+  "devDependencies": {
+    "tape": "2.12.0"
+  },
+  "dependencies": {
+    "fs-find-root": "1.0.1"
+  }
+}
