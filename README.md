@@ -22,7 +22,8 @@ to use for all projects in that directory **and all sub-directories**
 ```js
 var envpm = require('envpm')
 
-envpm(dir, args)
+envpm(dir, args) // executes npm with args,
+                 // looking for .npm-registry file starting from dir
 ```
 
 ## license

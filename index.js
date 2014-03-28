@@ -5,7 +5,9 @@ var find_file = require('fs-find-root').file
 
 module.exports = envpm
 
-function envpm(dir, args) {
+function envpm(dir, args, _exec) {
+  var exec_npm = _exec || exec
+
   find_file('.npm-registry', dir, read_file)
 
   function read_file(err, found) {
@@ -16,10 +18,11 @@ function envpm(dir, args) {
 
   function registryize(err, data) {
     if(err) return exec_npm(args)
+
     exec_npm(args.concat(['--registry', data.toString().trim()]))
   }
 }
 
-function exec_npm(args) {
+function exec(args) {
   spawn('npm', args, {stdio: 'inherit'})
 }
