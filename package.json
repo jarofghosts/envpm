@@ -5,7 +5,7 @@
   "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "envpm": "node bin/envpm.js"
+    "envpm": "./bin/envpm.js"
   },
   "directories": {
     "test": "test"
