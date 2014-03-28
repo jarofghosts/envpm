@@ -1,6 +1,8 @@
 envpm
 ====
 
+[![Build Status](https://travis-ci.org/jarofghosts/envpm.svg?branch=master)](https://travis-ci.org/jarofghosts/envpm)
+
 easy directory-level registry setting for npm
 
 ## installation
@@ -23,7 +25,7 @@ to use for all projects in that directory **and all sub-directories**
 var envpm = require('envpm')
 
 envpm(dir, args) // executes npm with args,
-                 // looking for .npm-registry file starting from dir
+                 // looking for .npm-registry file starting in dir
 ```
 
 ## license
