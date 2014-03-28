@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "npm registry environment manager",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "envpm": "node bin/envpm.js"
+  },
   "directories": {
     "test": "test"
   },
