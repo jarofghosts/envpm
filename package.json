@@ -1,6 +1,6 @@
 {
   "name": "envpm",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "npm registry environment manager",
   "main": "index.js",
   "preferGlobal": true,
