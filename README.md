@@ -12,7 +12,8 @@ easy directory-level registry setting for npm
 ## usage
 
 `envpm` proxies commands to npm, but (in the event of a `.npm-registry` file in
-a root directory) sets the registry accordingly.
+a root directory) sets the registry accordingly. if `--registry` is set
+explicitly in the command, the file check is skipped.
 
 ### `.npm-registry` file
 

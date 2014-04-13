@@ -8,6 +8,8 @@ module.exports = envpm
 function envpm(dir, args, _exec) {
   var exec_npm = _exec || exec
 
+  if(args.indexOf('--registry') > -1) return exec_npm(args)
+
   find_file('.npm-registry', dir, read_file)
 
   function read_file(err, found) {
