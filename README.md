@@ -3,7 +3,7 @@ envpm
 
 [![Build Status](https://travis-ci.org/jarofghosts/envpm.svg?branch=master)](https://travis-ci.org/jarofghosts/envpm)
 
-easy directory-level registry setting for npm
+easy directory-level configuration scoping for npm
 
 ## installation
 
@@ -11,14 +11,8 @@ easy directory-level registry setting for npm
 
 ## usage
 
-`envpm` proxies commands to npm, but (in the event of a `.npm-registry` file in
-a root directory) sets the registry accordingly. if `--registry` is set
-explicitly in the command, the file check is skipped.
-
-### `.npm-registry` file
-
-just a plaintext file with a fully-qualified url to the npm registry you want
-to use for all projects in that directory **and all sub-directories**
+`envpm` proxies commands to npm, but (in the event of a `.npmrc` file in a root
+directory) uses the configuration information present in that file.
 
 ### as a module
 
@@ -26,7 +20,7 @@ to use for all projects in that directory **and all sub-directories**
 var envpm = require('envpm')
 
 envpm(dir, args) // executes npm with args,
-                 // looking for .npm-registry file starting in dir
+                 // looking for .npmrc file starting in dir
 ```
 
 ## license
