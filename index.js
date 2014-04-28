@@ -1,3 +1,5 @@
+var which = require('which')
+
 var spawn = require('child_process').spawn
   , fs = require('fs')
 
@@ -10,21 +12,19 @@ function envpm(dir, args, _exec) {
 
   if(args.indexOf('--registry') > -1) return exec_npm(args)
 
-  find_file('.npm-registry', dir, read_file)
+  find_file('.npmrc', dir, run_npm)
 
-  function read_file(err, found) {
+  function run_npm(err, found) {
     if(err || !found) return exec_npm(args)
 
-    fs.readFile(found, registryize)
-  }
-
-  function registryize(err, data) {
-    if(err) return exec_npm(args)
-
-    exec_npm(args.concat(['--registry', data.toString().trim()]))
+    exec_npm(args.concat(['--userconfig', found]))
   }
 }
 
 function exec(args) {
-  spawn('npm', args, {stdio: 'inherit'})
+  var run_options = {stdio: 'inherit'} 
+    , node = which.sync('node')
+    , npm = which.sync('npm')
+
+  spawn(node, [npm].concat(args), {stdio: 'inherit'})
 }

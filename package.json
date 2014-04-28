@@ -33,6 +33,7 @@
     "tape": "2.12.0"
   },
   "dependencies": {
-    "fs-find-root": "1.0.1"
+    "fs-find-root": "1.0.1",
+    "which": "1.0.5"
   }
 }

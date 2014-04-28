@@ -13,6 +13,8 @@ test('finds file in dir', function(t) {
   )
 
   function check_exec(args) {
-    t.deepEqual(args, ['install', 'butts@0.0.0', '--registry', 'gord'])
+    t.deepEqual(
+      args
+    , ['install', 'butts@0.0.0', '--userconfig', __dirname + '/test-dir1/.npmrc'])
   }
 })
