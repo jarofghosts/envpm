@@ -1,9 +1,8 @@
-var which = require('which')
-
 var spawn = require('child_process').spawn
   , fs = require('fs')
 
 var find_file = require('fs-find-root').file
+  , which = require('which')
 
 module.exports = envpm
 
