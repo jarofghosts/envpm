@@ -5,7 +5,7 @@ envpm
 
 easy directory-level configuration scoping for npm
 
-![example](https://cloud.githubusercontent.com/assets/37303/2880946/54716584-d47d-11e3-9495-b1c346eca59a.gif)
+![example](https://cloud.githubusercontent.com/assets/37303/2881041/70d50e1e-d47e-11e3-9848-8ec1ac88f81c.gif)
 
 ## installation
 
