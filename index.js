@@ -13,14 +13,14 @@ function envpm(dir, args, _exec) {
 
   function run_npm(err, found) {
     if(err || !found) return exec_npm(args)
+    if(args.indexOf('--which') > -1) return found
 
     exec_npm(args.concat(['--userconfig', found]))
   }
 }
 
 function exec(args) {
-  var run_options = {stdio: 'inherit'} 
-    , node = which.sync('node')
+  var node = which.sync('node')
     , npm = which.sync('npm')
 
   spawn(node, [npm].concat(args), {stdio: 'inherit'})

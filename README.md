@@ -11,8 +11,11 @@ easy directory-level configuration scoping for npm
 
 ## usage
 
-`envpm` proxies commands to npm, but (in the event of a `.npmrc` file in a root
-directory) uses the configuration information present in that file.
+`envpm` proxies commands to npm. in the event of a `.npmrc` file in a root
+directory, it uses the configuration information present in that file.
+
+`envpm --which` prints the location of the `.npmrc` that will be used from
+your current directory.
 
 ### as a module
 

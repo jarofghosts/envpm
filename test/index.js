@@ -15,6 +15,18 @@ test('finds file in dir', function(t) {
   function check_exec(args) {
     t.deepEqual(
       args
-    , ['install', 'butts@0.0.0', '--userconfig', __dirname + '/test-dir1/.npmrc'])
+    , [
+        'install'
+      , 'butts@0.0.0'
+      , '--userconfig'
+      , __dirname + '/test-dir1/.npmrc'
+      ]
+    )
   }
+})
+
+test('prints location if --which specified', function(t) {
+  t.plan(1)
+
+   
 })
