@@ -13,7 +13,7 @@ easy directory-level configuration scoping for npm
 
 ## usage
 
-`envpm` proxies commands to npm, but (in the event of a `.npmrc` file in a directory that contains a `package.json`) uses the configuration information present in that file. If you'd like
+`envpm` proxies commands to npm, but (in the event of a `.npmrc` file your current working directory or any directory up from that) uses the configuration information present in that file. If you'd like
 to make `npm` cache dir aware *all* the time, put the following command in your 
 `.bashrc`:
 
