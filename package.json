@@ -11,7 +11,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/*.test.js"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
