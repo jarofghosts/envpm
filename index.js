@@ -5,13 +5,17 @@ var findFile = require('fs-find-root').file
 
 module.exports = envpm
 
-function envpm(dir, args, _exec) {
+function envpm(dir, args, _exec, check) {
   var execNpm = _exec || exec
 
-  findFile('.npmrc', dir, run_npm)
+  findFile('.npmrc', dir, runNpm)
 
-  function run_npm(err, found) {
+  function runNpm(err, found) {
     if(err || !found) return execNpm(args)
+
+    if(args.length === 1 && args[0] === 'which') {
+      return check ? check(found) : console.log(found)
+    }
 
     execNpm(args.concat(['--userconfig', found]))
   }
