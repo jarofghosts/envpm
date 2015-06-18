@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/jarofghosts/envpm",
   "devDependencies": {
-    "tape": "^4.0.0"
+    "tape": "4.0.0"
   },
   "dependencies": {
     "fs-find-root": "1.0.1",
