@@ -16,10 +16,10 @@ test('finds file in dir', function(t) {
     t.deepEqual(
         args
       , [
-            'install'
-          , 'butts@0.0.0'
-          , '--userconfig'
+            '--userconfig'
           , path.join(__dirname, 'test-dir1', '.npmrc')
+          , 'install'
+          , 'butts@0.0.0'
         ]
     )
   }

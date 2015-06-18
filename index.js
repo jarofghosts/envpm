@@ -11,13 +11,15 @@ function envpm(dir, args, _exec, check) {
   findFile('.npmrc', dir, runNpm)
 
   function runNpm(err, found) {
-    if(err || !found) return execNpm(args)
+    if(err || !found) {
+      return execNpm(args)
+    }
 
     if(args.length === 1 && args[0] === 'which') {
       return check ? check(found) : console.log(found)
     }
 
-    execNpm(args.concat(['--userconfig', found]))
+    execNpm(['--userconfig', found].concat(args))
   }
 }
 
