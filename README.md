@@ -27,8 +27,8 @@ envpm which
 This will print the location to the `.npmrc` that envpm will source if run
 from your current working directory.
 
-If you'd like to make `npm` cache dir aware *all* the time, put the following
-command in your `.bashrc`:
+If you'd like to make `npm` dir aware *all* the time, put the following command
+in your `.bashrc`:
 
 ```bash
 alias npm=envnpm
