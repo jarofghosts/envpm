@@ -1,8 +1,10 @@
-envpm
-=====
+# envpm
 
-[![Build Status](http://img.shields.io/travis/jarofghosts/envpm.svg?style=flat)](https://travis-ci.org/jarofghosts/envpm)
-[![npm install](http://img.shields.io/npm/dm/envpm.svg?style=flat)](https://www.npmjs.org/package/envpm)
+[![Build Status](https://img.shields.io/travis/jarofghosts/envpm.svg?style=flat-square)](https://travis-ci.org/jarofghosts/envpm)
+[![npm install](https://img.shields.io/npm/dm/envpm.svg?style=flat-square)](https://www.npmjs.org/package/envpm)
+[![npm version](https://img.shields.io/npm/v/envpm.svg?style=flat-square)](https://www.npmjs.org/package/envpm)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![License](https://img.shields.io/npm/l/envpm.svg?style=flat-square)](https://github.com/jarofghosts/envpm/blob/master/LICENSE)
 
 easy directory-level configuration scoping for npm
 
