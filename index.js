@@ -8,6 +8,10 @@ module.exports = envpm
 function envpm (dir, args, _exec, check) {
   var execNpm = _exec || exec
 
+  if (args.indexOf('--userconfig') > -1) {
+    return execNpm(args)
+  }
+
   findFile('.npmrc', dir, runNpm)
 
   function runNpm (err, found) {

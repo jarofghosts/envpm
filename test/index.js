@@ -26,6 +26,28 @@ test('finds file in dir', function (t) {
   }
 })
 
+test('passes through already-set userconfig', function (t) {
+  t.plan(1)
+
+  envpm(
+    path.join(__dirname, 'test-dir1'),
+    ['--userconfig', 'beep', 'install', 'butts@0.0.0'],
+    checkExec
+  )
+
+  function checkExec (args) {
+    t.deepEqual(
+      args,
+      [
+        '--userconfig',
+        'beep',
+        'install',
+        'butts@0.0.0'
+      ]
+    )
+  }
+})
+
 test('lists found location for `which`', function (t) {
   t.plan(1)
 
